@@ -1,3 +1,7 @@
+html {
+ padding: 50px;
+}
+
 body,
 #closed-captions {
     width: 700px;
@@ -42,7 +46,7 @@ viewer knows who's talking
     font-family: "Brenner Mono";
     font-style: Normal;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 17px;
 }
 
 .voice3 {
@@ -50,6 +54,7 @@ viewer knows who's talking
     font-style: Normal;
     font-weight: 800;
     font-size: 16px;
+    color: darkred;
     /*    transform: scale(1, 0.8);*/
 }
 
@@ -126,11 +131,8 @@ You probably want to change the styling.
     display: inline-block;
 }
 
-.p9.on span,
-.p12.on span {
-    text-align: right;
-    display: inline-block;
-    color: red;
+.p7.on {
+    max-width: 700px;
 }
 
 /* **********************************************
@@ -151,15 +153,16 @@ Sounds.
     background: white;
 }
 
-iframe {
-    display: block;
+.sound8 iframe {
+    transition: 25s ease-in;
+    box-shadow: 0px 0px 100px 5px rgba(255,0,0,1);
 }
 
-/* The moment the class .sound1 is added to the body, the movie makes a turn */
-.sound2 iframe {
-    /*
-    transition-delay: 1s;
-    transition: 2s;
-    transform: rotate(1turn);
-*/
+.sound10 iframe {
+    transition 0.4s;
+    box-shadow: none;
+}
+
+iframe {
+    display: block;
 }
