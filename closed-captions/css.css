@@ -1,8 +1,8 @@
 html {
- padding: 50px;
+    padding: 50px;
 }
 
-body,
+#video-placeholder,
 #closed-captions {
     width: 700px;
     margin: auto;
@@ -54,7 +54,7 @@ viewer knows who's talking
     font-style: Normal;
     font-weight: 800;
     font-size: 16px;
-    color: darkred;
+    color: #C41919;
     /*    transform: scale(1, 0.8);*/
 }
 
@@ -82,7 +82,8 @@ You probably want to change the styling.
 .p0.on span:nth-of-type(5),
 .p0.on span:nth-of-type(6),
 .p0.on span:nth-of-type(7),
-.p0.on span:nth-of-type(8) {
+.p0.on span:nth-of-type(8),
+.p0.on span:nth-of-type(9){
     opacity: 1;
     transition: 0.1s;
     margin-right: -.1em;
@@ -92,29 +93,25 @@ You probably want to change the styling.
     margin-right: .2em;
 }
 
-.p0.on span:nth-of-type(9),
-.p0.on span:nth-of-type(10) {
+.p0.on span:nth-of-type(10),
+.p0.on span:nth-of-type(11) {
     opacity: 1;
     transition: 0s 2.8s;
 }
 
-.p0.on span:nth-of-type(9) {
+.p0.on span:nth-of-type(10) {
     margin-left: .7em;
 }
 
-.p0.on span:nth-of-type(11) {
+.p0.on span:nth-of-type(12) {
     opacity: 1;
     transition: 0s 3.9s;
     margin-right: -.25em;
-    font-size: 60px;
+    font-size: 30px;
 }
 
-.p2.on span:first-of-type,
-.p2.on span:nth-of-type(2) {
-    color: black;
-}
-
-.p2.on span:nth-of-type(3) {
+/*
+.p2.on span:nth-of-type(4) {
     letter-spacing: 5px;
     margin-left: 5px;
     background-image: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0));
@@ -123,13 +120,16 @@ You probably want to change the styling.
     background-repeat: no-repeat;
     transition: background-size 0.3s linear;
 }
+*/
 
+/*
 .p3.on span:nth-of-type(6) {
     transition-delay: 2s;
     transition: transform 2s ease-in-out;
     transform: rotate(1turn);
     display: inline-block;
 }
+*/
 
 .p7.on {
     max-width: 700px;
@@ -141,11 +141,35 @@ Sounds.
     style anything within the body the moment
     a sound starts.
 *********************************************  */
+iframe {
+    display: block;
+}
 
-/* The moment the class .sound1 is added to the body, the background is yellow */
+.sound1 #alarm {
+    transition: 0.5s;
+    animation: sound1 2s ease;
+}
+
+@keyframes sound1 {
+    0% {
+        transform: scale(1);
+        opacity: 0;
+    }
+
+    50% {
+        transform: scale(1.5);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
 .sound2 {
     transition: 2.5s;
-    background: #8b0000;
+    /*    background: #8b0000;*/
 }
 
 .sound3 {
@@ -154,15 +178,38 @@ Sounds.
 }
 
 .sound8 iframe {
-    transition: 25s ease-in;
-    box-shadow: 0px 0px 100px 5px rgba(255,0,0,1);
+    animation: sound8 45s ease-out;
 }
 
-.sound10 iframe {
-    transition 0.4s;
-    box-shadow: none;
+@keyframes sound8 {
+    0% {
+        box-shadow: 0px 0px 0px 0px rgba(255, 0, 0, 0);
+/*        height: 394px;*/
+        transform: skewX(0deg);
+    }
+
+    95% {
+        box-shadow: 0px 0px 100px 5px rgba(255, 0, 0, 1);
+/*        height: 200px;*/
+        transform: skewX(5deg);
+    }
+
+    100% {
+        box-shadow: none;
+/*        height: 394px;*/
+        transform: skewX(0deg);
+    }
 }
 
-iframe {
-    display: block;
+.image {
+    float: right;
+    transition: 0.5s;
+    margin-right: 200px;
+    margin-top: -220px;
+}
+
+#alarm {
+    width: 120px;
+    height: auto;
+    opacity: 0;
 }
