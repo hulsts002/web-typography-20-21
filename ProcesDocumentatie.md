@@ -31,9 +31,30 @@ Hieruit kwam het volgende:
 - Darice weet wat geluiden zijn, ze is later in haar leven doof geworden
 - Wat voor haar niet duidelijk is, is achtergrond geluiden. Deze worden meestal (goed) aangegeven in de closed captions
 - Off screen stemmen graag in italic
-- Ze wil wel ontspannend een film kunnen kijken, effecten moet niet afleiden
+- Ze wil wel ontspannend een film kunnen kijken, effecten moet niet te veel afleiden
 - Graag alle geluiden meenemen
 
 
 ## Week 2
 ### Onderscheiding van stemmen - 2
+Om nog verder de stemmen te verduidelijken, en dan met namen stemmen die off screen zijn, heb ik een identificatie toegevoegd zodat je weet wie praat.
+![alt text](https://github.com/hulsts002/frontend-voor-designers-1920/blob/master/opdracht1/img/Readme/Schets.jpg "Schets")
+
+
+### Geluiden
+Uit het feedback gesprek kwam dat geluiden belangrijk zijn. Deze zijn niet te horen en worden tevens niet aangetoond in de captions.\
+Deze geluiden zijn meestal kort, dus ben ik met een oplossing gekomen die snel en effectief het geluid toont.\
+- Icoon representeert het type geluid
+- De grote representeert hoe hard het geluid is en/of bepaalde ritmes
+
+
+
+
+
+
+
+
+
+
+
+

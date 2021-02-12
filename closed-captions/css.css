@@ -36,16 +36,18 @@ viewer knows who's talking
 ********************************************** */
 
 .voice1 {
-    font-family: "Brenner";
+    font-family: "Brenner Sans";
     font-style: italic;
-    font-weight: 400;
+    font-weight: 600;
     font-size: 19px;
+    color: #ebc034;
+/*    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;*/
 }
 
 .voice2 {
     font-family: "Brenner Mono";
     font-style: Normal;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 17px;
 }
 
@@ -53,9 +55,9 @@ viewer knows who's talking
     font-family: "Brenner Sans";
     font-style: Normal;
     font-weight: 800;
-    font-size: 16px;
-    color: #C41919;
-    /*    transform: scale(1, 0.8);*/
+    font-size: 17px;
+/*    color: #C41919;*/
+        transform: scale(1, 0.9);
 }
 
 .voice4 {
@@ -83,7 +85,7 @@ You probably want to change the styling.
 .p0.on span:nth-of-type(6),
 .p0.on span:nth-of-type(7),
 .p0.on span:nth-of-type(8),
-.p0.on span:nth-of-type(9){
+.p0.on span:nth-of-type(9) {
     opacity: 1;
     transition: 0.1s;
     margin-right: -.1em;
@@ -147,6 +149,8 @@ iframe {
 
 .sound1 #alarm {
     transition: 0.5s;
+    width: 120px;
+    height: auto;
     animation: sound1 2s ease;
 }
 
@@ -167,14 +171,75 @@ iframe {
     }
 }
 
-.sound2 {
-    transition: 2.5s;
-    /*    background: #8b0000;*/
+.sound2 #alarm {
+    transition: 0.5s;
+    width: 120px;
+    height: auto;
+    animation: sound2 1.6s ease;
 }
 
-.sound3 {
-    transition: .5s;
-    background: white;
+@keyframes sound2 {
+    0% {
+        margin-right: 50px;
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        margin-right: -50px;
+        opacity: 0;
+    }
+}
+
+.sound3 #alarm {
+    transition: 0.5s;
+    width: 120px;
+    height: auto;
+    animation: sound3 1.9s ease;
+}
+
+@keyframes sound3 {
+    0% {
+        margin-top: 0px;
+        opacity: 0;
+    }
+
+    35% {
+        margin-top: 50px;
+        opacity: 1;
+    }
+
+    100% {
+        margin-top: -50px;
+        opacity: 0;
+    }
+}
+
+.sound6 #alarm {
+    transition: 0.5s;
+    width: 120px;
+    height: auto;
+    animation: sound6 1.9s ease;
+}
+
+@keyframes sound6 {
+    0% {
+        margin-top: 0px;
+        opacity: 0;
+    }
+
+    35% {
+        margin-top: 50px;
+        opacity: 1;
+    }
+
+    100% {
+        margin-top: -50px;
+        opacity: 0;
+    }
 }
 
 .sound8 iframe {
@@ -184,32 +249,31 @@ iframe {
 @keyframes sound8 {
     0% {
         box-shadow: 0px 0px 0px 0px rgba(255, 0, 0, 0);
-/*        height: 394px;*/
         transform: skewX(0deg);
     }
 
-    95% {
+    96% {
         box-shadow: 0px 0px 100px 5px rgba(255, 0, 0, 1);
-/*        height: 200px;*/
         transform: skewX(5deg);
     }
 
     100% {
         box-shadow: none;
-/*        height: 394px;*/
         transform: skewX(0deg);
     }
 }
 
 .image {
+    display: block;
     float: right;
     transition: 0.5s;
     margin-right: 200px;
     margin-top: -220px;
+
 }
 
 #alarm {
-    width: 120px;
-    height: auto;
     opacity: 0;
+    max-height: 120px;
+    max-width: 120px;
 }
