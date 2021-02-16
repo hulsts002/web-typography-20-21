@@ -1,12 +1,19 @@
 html {
     padding: 50px;
+    background: rgb(10, 10, 10);
 }
 
-#video-placeholder,
-#closed-captions {
-    width: 700px;
+body {
+    text-align: center;
+}
+
+
+#video-placeholder {
+    width: 900px;
+    height: 580px;
     margin: auto;
 }
+
 
 /* **********************************************
 Basic mechanics
@@ -19,6 +26,10 @@ Feel free to adjust the defaults to your needs.
     opacity: 0;
     /*    transition: .05s;*/
     position: absolute;
+    margin-top: -60px;
+    padding: 5px;
+    width: 100%;
+    max-width: 1400px;
 }
 
 #closed-captions .on {
@@ -40,8 +51,7 @@ viewer knows who's talking
     font-style: italic;
     font-weight: 600;
     font-size: 19px;
-    color: #ebc034;
-/*    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;*/
+    color: yellow;
 }
 
 .voice2 {
@@ -49,6 +59,7 @@ viewer knows who's talking
     font-style: Normal;
     font-weight: 500;
     font-size: 17px;
+    color: white;
 }
 
 .voice3 {
@@ -56,8 +67,8 @@ viewer knows who's talking
     font-style: Normal;
     font-weight: 800;
     font-size: 17px;
-/*    color: #C41919;*/
-        transform: scale(1, 0.9);
+    color: white;
+    transform: scale(1, 0.9);
 }
 
 .voice4 {
@@ -96,7 +107,8 @@ You probably want to change the styling.
 }
 
 .p0.on span:nth-of-type(10),
-.p0.on span:nth-of-type(11) {
+.p0.on span:nth-of-type(11),
+.p0.on span:nth-of-type(12) {
     opacity: 1;
     transition: 0s 2.8s;
 }
@@ -105,36 +117,18 @@ You probably want to change the styling.
     margin-left: .7em;
 }
 
-.p0.on span:nth-of-type(12) {
-    opacity: 1;
-    transition: 0s 3.9s;
-    margin-right: -.25em;
-    font-size: 30px;
-}
-
-/*
-.p2.on span:nth-of-type(4) {
-    letter-spacing: 5px;
-    margin-left: 5px;
-    background-image: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0));
-    background-size: 100% 2px, 0% 2px;
-    background-position: 100% 100%, 0 100%;
-    background-repeat: no-repeat;
-    transition: background-size 0.3s linear;
-}
-*/
-
-/*
-.p3.on span:nth-of-type(6) {
-    transition-delay: 2s;
-    transition: transform 2s ease-in-out;
-    transform: rotate(1turn);
-    display: inline-block;
-}
-*/
-
 .p7.on {
-    max-width: 700px;
+    word-break: break-all;
+    max-width: 300px;
+}
+
+.p7.on span:nth-of-type(8),
+.p7.on span:nth-of-type(9),
+.p7.on span:nth-of-type(10),
+.p7.on span:nth-of-type(11),
+.p7.on span:nth-of-type(12) {
+    color: aqua;
+
 }
 
 /* **********************************************
@@ -143,8 +137,41 @@ Sounds.
     style anything within the body the moment
     a sound starts.
 *********************************************  */
+
 iframe {
     display: block;
+}
+
+.captionSounds p {
+    opacity: 0;
+    z-index: 50;
+    font-family: "Brenner Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 19px;
+    color: greenyellow;
+    position: absolute;
+    width: 100%;
+    max-width: 1400px;
+    margin-top: -100px;
+}
+
+@keyframes closeCaptionSound {
+    0% {
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
 
 .sound1 #alarm {
@@ -152,6 +179,11 @@ iframe {
     width: 120px;
     height: auto;
     animation: sound1 2s ease;
+}
+
+.sound1 #alarm01 {
+    transition: 0.5s;
+    animation: closeCaptionSound 1.7s ease;
 }
 
 @keyframes sound1 {
@@ -178,6 +210,11 @@ iframe {
     animation: sound2 1.6s ease;
 }
 
+.sound2 #alarm02 {
+    transition: 0.5s;
+    animation: closeCaptionSound 1.6s ease;
+}
+
 @keyframes sound2 {
     0% {
         margin-right: 50px;
@@ -201,6 +238,11 @@ iframe {
     animation: sound3 1.9s ease;
 }
 
+.sound3 #alarm03 {
+    transition: 0.5s;
+    animation: closeCaptionSound 1.5s ease;
+}
+
 @keyframes sound3 {
     0% {
         margin-top: 0px;
@@ -215,6 +257,33 @@ iframe {
     100% {
         margin-top: -50px;
         opacity: 0;
+    }
+}
+
+.sound4 #alarm {
+    transition: 0.5s;
+    width: 120px;
+    height: auto;
+    animation: sound4 2.1s ease;
+}
+
+@keyframes sound4 {
+    0% {
+        margin-top: 0px;
+        opacity: 0;
+        transform: scale(0.7);
+    }
+
+    40% {
+        margin-top: 50px;
+        opacity: 1;
+        transform: scale(0.7);
+    }
+
+    100% {
+        margin-top: -50px;
+        opacity: 0;
+        transform: scale(0.7);
     }
 }
 
@@ -243,23 +312,26 @@ iframe {
 }
 
 .sound8 iframe {
-    animation: sound8 45s ease-out;
+    animation: sound8 43s ease-out;
 }
 
 @keyframes sound8 {
     0% {
         box-shadow: 0px 0px 0px 0px rgba(255, 0, 0, 0);
         transform: skewX(0deg);
+        filter: contrast(100%);
     }
 
     96% {
         box-shadow: 0px 0px 100px 5px rgba(255, 0, 0, 1);
         transform: skewX(5deg);
+        filter: contrast(300%);
     }
 
     100% {
         box-shadow: none;
         transform: skewX(0deg);
+        filter: contrast(100%);
     }
 }
 
@@ -267,13 +339,13 @@ iframe {
     display: block;
     float: right;
     transition: 0.5s;
-    margin-right: 200px;
-    margin-top: -220px;
+    margin-right: 50px;
+    margin-top: -300px;
 
 }
 
 #alarm {
     opacity: 0;
-    max-height: 120px;
-    max-width: 120px;
+    max-height: 130px;
+    max-width: 130px;
 }
