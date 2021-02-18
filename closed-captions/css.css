@@ -1,6 +1,6 @@
 html {
     padding: 50px;
-    background: rgb(10, 10, 10);
+    background: rgb(0, 0, 0);
 }
 
 body {
@@ -117,19 +117,6 @@ You probably want to change the styling.
     margin-left: .7em;
 }
 
-.p7.on {
-    word-break: break-all;
-    max-width: 300px;
-}
-
-.p7.on span:nth-of-type(8),
-.p7.on span:nth-of-type(9),
-.p7.on span:nth-of-type(10),
-.p7.on span:nth-of-type(11),
-.p7.on span:nth-of-type(12) {
-    color: aqua;
-
-}
 
 /* **********************************************
 Sounds.
@@ -153,7 +140,7 @@ iframe {
     position: absolute;
     width: 100%;
     max-width: 1400px;
-    margin-top: -100px;
+    margin-top: -90px;
 }
 
 @keyframes closeCaptionSound {
@@ -165,7 +152,7 @@ iframe {
         opacity: 1;
     }
 
-    90% {
+    80% {
         opacity: 1;
     }
 
@@ -183,7 +170,7 @@ iframe {
 
 .sound1 #alarm01 {
     transition: 0.5s;
-    animation: closeCaptionSound 1.7s ease;
+    animation: closeCaptionSound 1.5s ease;
 }
 
 @keyframes sound1 {
@@ -212,7 +199,7 @@ iframe {
 
 .sound2 #alarm02 {
     transition: 0.5s;
-    animation: closeCaptionSound 1.6s ease;
+    animation: closeCaptionSound 1.5s ease;
 }
 
 @keyframes sound2 {
@@ -240,7 +227,7 @@ iframe {
 
 .sound3 #alarm03 {
     transition: 0.5s;
-    animation: closeCaptionSound 1.5s ease;
+    animation: closeCaptionSound 1.4s ease;
 }
 
 @keyframes sound3 {
@@ -265,6 +252,11 @@ iframe {
     width: 120px;
     height: auto;
     animation: sound4 2.1s ease;
+}
+
+.sound4 #alarm04 {
+    transition: 0.5s;
+    animation: closeCaptionSound 1.6s ease;
 }
 
 @keyframes sound4 {
@@ -294,6 +286,11 @@ iframe {
     animation: sound6 1.9s ease;
 }
 
+.sound6 #alarm05 {
+    transition: 0.5s;
+    animation: closeCaptionSound 1.5s ease;
+}
+
 @keyframes sound6 {
     0% {
         margin-top: 0px;
@@ -312,7 +309,12 @@ iframe {
 }
 
 .sound8 iframe {
-    animation: sound8 43s ease-out;
+    animation: sound8 42.5s ease-out;
+}
+
+.sound8 #beeping01 {
+    transition: 0.5s;
+    animation: closeCaptionSound 45s ease;
 }
 
 @keyframes sound8 {
@@ -322,7 +324,7 @@ iframe {
         filter: contrast(100%);
     }
 
-    96% {
+    97% {
         box-shadow: 0px 0px 100px 5px rgba(255, 0, 0, 1);
         transform: skewX(5deg);
         filter: contrast(300%);
@@ -335,17 +337,149 @@ iframe {
     }
 }
 
+.sound10 iframe {
+    animation: sound10 44s ease-out;
+}
+
+.sound10 #beeping02 {
+    transition: 0.5s;
+    animation: closeCaptionSound 45s ease;
+}
+
+@keyframes sound10 {
+    0% {
+        box-shadow: 0px 0px 0px 0px rgb(2, 113, 161);
+        filter: grayscale(100%);
+        filter: contrast(100%);
+        opacity: 1;
+    }
+
+    10% {
+        box-shadow: 0px 0px 100px 10px rgb(245, 103, 103);
+        filter: grayscale(0%);
+        filter: contrast(230%);
+        opacity: 0.6;
+    }
+
+    20% {
+        box-shadow: 0px 0px 20px 0px rgb(2, 113, 161);
+        filter: grayscale(240%);
+        filter: contrast(100%);
+        opacity: 1;
+    }
+
+    30% {
+        box-shadow: 0px 0px 100px 10px rgb(245, 103, 103);
+        filter: grayscale(0%);
+        filter: contrast(230%);
+        opacity: 0.6;
+    }
+
+    40% {
+        box-shadow: 0px 0px 20px 0px rgb(2, 113, 161);
+        filter: grayscale(240%);
+        filter: contrast(100%);
+        opacity: 1;
+    }
+
+    45% {
+        box-shadow: 0px 0px 20px 0px rgb(2, 113, 161);
+        filter: grayscale(240%);
+        filter: contrast(100%);
+        opacity: 1;
+    }
+
+    62% {
+        box-shadow: 0px 0px 60px 10px rgb(245, 196, 121);
+        filter: grayscale(20%);
+        filter: contrast(210%);
+        opacity: 0.8;
+    }
+
+    69% {
+        box-shadow: 0px 0px 125px 30px rgb(207, 37, 37);
+        filter: grayscale(0%);
+        filter: contrast(300%);
+        opacity: 0.6;
+    }
+
+    80% {
+        box-shadow: 0px 0px 100px 20px rgb(245, 103, 103);
+        filter: grayscale(0%);
+        filter: contrast(230%);
+        opacity: 0.7;
+    }
+
+    100% {
+        box-shadow: 0px 0px 0px 0px rgb(2, 113, 161);
+        filter: grayscale(0%);
+        filter: contrast(100%);
+        opacity: 1;
+    }
+}
+
+.sound12 #notification {
+    transition: 0.5s;
+    width: 120px;
+    height: auto;
+    animation: sound12 0.8s ease;
+}
+
+.sound12 #ringing01 {
+    transition: 0.5s;
+    animation: closeCaptionSound 1s ease;
+}
+
+@keyframes sound12 {
+    0% {
+        transform: rotate(0deg);
+        opacity: 0;
+    }
+
+    25% {
+        transform: rotate(10deg);
+        opacity: 1;
+    }
+
+    50% {
+        transform: rotate(-10deg);
+    }
+
+    75% {
+        transform: rotate(10deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: rotate(0deg);
+        opacity: 0;
+    }
+}
+
+
+
 .image {
     display: block;
     float: right;
     transition: 0.5s;
     margin-right: 50px;
-    margin-top: -300px;
-
+    margin-top: -400px;
 }
 
 #alarm {
     opacity: 0;
-    max-height: 130px;
-    max-width: 130px;
+    width: 130px;
+    height: auto;
+}
+
+#notification {
+    display: block;
+    opacity: 0;
+    width: 100px;
+    height: auto;
+}
+
+#ringing01 {
+    margin-left: 900px;
+    width: 300px;
 }

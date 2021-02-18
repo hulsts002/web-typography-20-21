@@ -35,7 +35,7 @@ Hieruit kwam het volgende:
 - Ze wil wel ontspannend een film kunnen kijken, effecten moet niet te veel afleiden
 - Graag alle geluiden meenemen
 
-### Eerste aanpassing
+### Eerste aanpassing na feedback
 Ik had eerst wat uitgeprobeerd en een effect toegepast op een bepaalde woord in een zin. Dit heb ik na het feedbackgesprek met Vasilis weggehaald omdat
 dit overbodig is. De tekst kan al gelezen worden, het gaat juist om wat je niet kan horen of lezen.
 
@@ -43,7 +43,7 @@ dit overbodig is. De tekst kan al gelezen worden, het gaat juist om wat je niet 
 ## Week 2
 ### Onderscheiding van stemmen - 2
 Om nog verder de stemmen te verduidelijken, en dan met namen stemmen die off screen zijn, heb ik een identificatie toegevoegd zodat je weet wie praat.
-Daarnaast heb ik stemmen die off screen zijn ook in geel gezet, zodat het sneller te begrijpen is.
+Daarnaast heb ik stemmen die off screen zijn ook in geel gezet, zodat het sneller te begrijpen is. Omdat ik deze nu in geel heb gezet, heb ik de kleur in de emotie van de stem weggehaald (zie plaatje 2), omdat de kleur niet meer de emotie representeert.
 ![alt text](https://github.com/hulsts002/web-typography-20-21/blob/main/images/image04.png "Stemmen")
 
 ### Geluiden
@@ -55,20 +55,55 @@ Deze geluiden zijn meestal kort, dus ben ik met een oplossing gekomen die snel e
 
 ### Pieptoon
 Om de pieptoon nog sterker aan te geven heb ik gebruik gemaak van drie effecten.
-1. Boxshadow -> sfeer
-2. Skew + Contrast -> Om aan te geven dat het een naar piep geluid is
+- Boxshadow -> sfeer
+- Skew + Contrast -> Om aan te geven dat het een naar piep geluid is
 
 ### Feedback Moment
 Het zag er allemaal goed uit, het was goed te volgen. Twee punten werden benoemd door Darice als verbeterpunten.\
-1. Graag donkere achtergrond (grijs of zwart).
-2. Textueel geluiden (dus niet alleen een icoontje maar ook met tekst aangeven)
+- Graag donkere achtergrond (grijs of zwart).
+- Textueel geluiden (dus niet alleen een icoontje maar ook met tekst aangeven)
 
 En vasilis gaf aan te kijken naar het contrast van de tekst. De gele tekst van niet geheel goed zichtbaar op de witte achtergrond.
 
 
 ## Week 3
 ### Tekst
+Ik heb wat aanpassingen gemaakt met de tekst. Ten eerste heb ik de achtergrond zwart gemaakt op basis van feedback van Darice. Nu is het contrast van de gele tekst ook beter, waar Vasilis feedback op had gegeven.\
+![alt text](https://github.com/hulsts002/web-typography-20-21/blob/main/images/image06.png "Tekst")
 
+### Geluiden - 2
+Darice had aangegeven dat omdat nog duidelijker te maken wat geluiden zijn, buiten het icoontje, ook textueel aangegeven moet worden wat het geluid is.
+Dit heb ik toegepast door boven de tekst van de ondertiteling, kort aan te geven wat voor geluid het is.
+![alt text](https://github.com/hulsts002/web-typography-20-21/blob/main/images/image07.png "Textueel geluid")
+
+### Scene 2
+Ik ben gaan werken aan de tweede scene. Alle algemene keuzes zijn al toegepast (hoe de stemmen eruit zien), maar nu moest ik gaan werken aan de sfeer van de tweede scene. Ten opzichte van de eerste scene is er nu meer een eerily ambiance. Een gevoel van, gaat K de baseline test wel of niet halen. \
+Er is meer een ritme, de muziek gaat meer op en neer.\
+Ik heb met keyframes geprobeerd om dit ritme te creeëren zodat ik hier effecten op kan toepassen. Ik heb met verschillende effecten gespeeld waaronder:
+- Boxshadow -> Grootte, kleur
+- CSS Filter -> invert, grayscale, contrast en hue rotate
+- Width en Height
+- Opacity
+
+
+## Eindoplevering
+
+### Stemmen
+Stemmen van personen die niet op het scherm te zien zijn:\
+- Italic -> feedback van Darice.
+- Kleur: Geel -> verduidelijken van een off screen stem, dat je het in één oogopslag kan zien.
+
+Stemmen op basis van emotie:\
+- 'K' is een android, die emotieloos overkwam. Daarom heb ik voor Mono gekozen, omdat dit type font teven emotieloos over komt.
+- Man die K uitscheld -> Bold om aggresiever over te komen. Ook iets kleiner gemaakt omdat hij het zachter zegt dan normaal.
+
+### Geluiden
+- Iconen -> duidelijk te zien en er kan gespeeld worden met positie en grootte om aan te geven hoe hard het geluid is en/of wat voor ritme.
+- Textueel -> Feedback van Darice, ze ziet ook graag wat voor geluid het is in de vorm van tekst.
+
+### Sfeer/Muziek/Ambiance
+- Box shadow rond video -> Geeft met kleur aan wat voor sfeer er is, en met grootte en ritme aan hoe de sfeer/muziek zich afspeelt.
+- Extra effecten -> Om de sfeer/muziek te versterken is er gebruik gemaakt van filters (bv. hoog contrast) en transform van de videoplayer.
 
 
 
